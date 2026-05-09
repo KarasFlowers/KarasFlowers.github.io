@@ -9,7 +9,7 @@
     
     <title>
         
-            归档: 2025/6 |
+            为什么DDoS可以实施？ |
         
         The Fourth World
     </title>
@@ -82,7 +82,7 @@
                         </li>
                     
                         
-                        <li class="menu-item flex-start border-box active">
+                        <li class="menu-item flex-start border-box">
                             <a class="menu-text-color border-box" href="/archives">
                                 
                                 归档
@@ -135,7 +135,7 @@
                 </li>
             
                 
-                <li class="drawer-menu-item border-box not-sub-menu active">
+                <li class="drawer-menu-item border-box not-sub-menu">
                     <label class="drawer-menu-label border-box">
                         <a class="drawer-menu-text-color left-side flex-start border-box" href="/archives">
                             
@@ -173,37 +173,203 @@
             <div class="main-content border-box">
                 
 
-                    <div class="fade-in-down-animation">
-    <div class="archives-container">
-        <div class="archives-timeline border-box">
+                    
+<div class="fade-in-down-animation">
+    <div class="post-page-container border-box">
+        <div class="post-content-container border-box">
             
-<div class="archive-list-container border-box">
-    
-        <section class="archive-item border-box">
-            <div class="archive-item-header border-box">
-                <span class="archive-year">2025</span>
-            </div>
-            <ul class="archive-item-body border-box">
+
+            <div class="post-content-bottom border-box">
                 
-                    <li class="post-item border-box">
-                        <span class="starting-point border-box flex-center"></span>
-                        <span class="post-date border-box">06-03</span>
-                        <a class="post-title border-box text-ellipsis"
-                           href="/2025/06/03/myFirstBlog/"
-                        >myFirstBlog</a>
-                    </li>
+                    <div class="post-title">
+                        为什么DDoS可以实施？
+                    </div>
                 
-            </ul>
-        </section>
+
+                
+                    <div class="post-header border-box">
+                        
+                            <div class="avatar-box border-box">
+                                <img src="/images/profilePhoto.jpg">
+                            </div>
+                        
+                        <div class="info-box">
+                            <div class="author border-box">
+                                <span class="name">哈桑农户</span>
+                                
+                            </div>
+                            <div class="meta-info border-box">
+                                
+
+<div class="post-meta-info-container border-box post">
+    <div class="post-meta-info border-box">
+        
+
+        
+            <span class="meta-info-item post-create-date">
+                <i class="icon fa-solid fa-calendar-plus"></i>&nbsp;
+                <span class="datetime">2026-01-05 12:00:00</span>
+            </span>
+
+            
+                <span class="meta-info-item post-update-date">
+                    <i class="icon fa-solid fa-file-pen"></i>&nbsp;
+                    <span class="datetime" data-updated="Sat May 09 2026 14:27:55 GMT+0800">2026-05-09 14:27:55</span>
+                </span>
+            
+        
+
+        
+            <span class="meta-info-item post-category border-box"><i class="icon fas fa-folder"></i>&nbsp;
+                <ul class="post-category-ul">
+                    
+                            <li class="category-item"><a href="/categories/%E7%BC%96%E7%A8%8B%E8%BF%B7%E6%80%9D/">编程迷思</a></li>
+                        
+                    
+                </ul>
+            </span>
+        
+
+        
+
+        
+        
+        
+        
+            <span class="meta-info-item post-pv">
+                <i class="icon fas fa-eye"></i>&nbsp;<span id="busuanzi_value_page_pv"></span>
+            </span>
+        
+    </div>
+
     
 </div>
 
+                            </div>
+                        </div>
+                    </div>
+                
+
+                <div class="post-content keep-markdown-body ">
+                    
+
+                    
+                         <p>暴露自己的IP地址不是个好选择，其中之一就是可能受到DDoS（Distributed Denial-of-Service）打击。简单类比，相当于大量人员去饭店只占座不点餐。这个“座”是什么？DDoS究竟占了服务器的什么资源？为什么听上去如此简单的攻击到现在还是问题（吗）？</p>
+<h1 id="DDoS原理"><a href="#DDoS原理" class="headerlink" title="DDoS原理"></a>DDoS原理</h1><p>在计算机网络中（特别是 TCP 协议），服务器和用户建立连接是有成本的。<br>TCP的三次握手：</p>
+<ol>
+<li>客户端向服务器发送SYN包（我要吃饭）</li>
+<li>服务器恢复SYN-ACK包（好的，这是你的桌号，请确认）</li>
+<li>客户端回应ACK包（确认入座）</li>
+</ol>
+<p>DDoS执行了很多第一步，服务器为每一个请求分配内存，记录下“有个家伙要来，IP是xxx”，然后回复 SYN-ACK（第二步）。可是DDoS并不回应ACK包（或者黑客伪造了假的 IP 地址，服务器的回信寄给了空气）（第三步）。</p>
+<p>服务器为了等待那个永远不会回来的 ACK，必须在内存中维护一个“半连接队列” (Semi-open connection queue)。每记录一条“等待确认”的连接，就需要消耗几十到几百字节的内存，一旦到达最大容量，正常的请求就会被忽视。</p>
+<p>除了“占座”（耗尽连接资源），DDoS 还有另外两种常见的“捣乱”方式，也可以用饭店类比：</p>
+<h4 id="1-堵门（带宽消耗型-Volumetric-Attacks）"><a href="#1-堵门（带宽消耗型-Volumetric-Attacks）" class="headerlink" title="1. 堵门（带宽消耗型 - Volumetric Attacks）"></a>1. 堵门（带宽消耗型 - Volumetric Attacks）</h4><ul>
+<li><p><strong>类比</strong>：这帮流氓不进店占座，而是叫了 1000 个人挤在饭店大门口及走廊里。</p>
+</li>
+<li><p><strong>原理</strong>：利用海量的垃圾数据包（UDP Flood, NTP Amplification 等）塞满你服务器的<strong>网络带宽</strong>。</p>
+</li>
+<li><p><strong>后果</strong>：真正的客人连饭店大门都挤不进去。</p>
+</li>
+<li><p><strong>资源</strong>：占用的不是服务器内部的资源，而是**网络管道的容量 (Bandwidth)**。</p>
+</li>
+</ul>
+<h4 id="2-累死厨师（应用层攻击-Application-Layer-Attacks）"><a href="#2-累死厨师（应用层攻击-Application-Layer-Attacks）" class="headerlink" title="2. 累死厨师（应用层攻击 - Application Layer Attacks）"></a>2. 累死厨师（应用层攻击 - Application Layer Attacks）</h4><ul>
+<li><p><strong>类比</strong>：流氓进店了，也确实点餐了。但他一个人点了“满汉全席”，还要厨师每道菜都现做，做完了一口不吃，倒掉重做。</p>
+</li>
+<li><p><strong>原理</strong>：攻击者针对消耗 CPU 或数据库最严重的页面发起请求（比如 CC 攻击）。例如疯狂调用“搜索全站历史记录”这种极耗算力的功能。</p>
+</li>
+<li><p><strong>后果</strong>：前台（网关）可能觉得没满座，但后厨（CPU&#x2F;数据库）已经累吐血了，无法服务其他人。</p>
+</li>
+<li><p><strong>资源</strong>：占用的是 <strong>CPU 计算能力</strong> 和 <strong>磁盘 I&#x2F;O</strong>。</p>
+</li>
+</ul>
+<h1 id="应对方法"><a href="#应对方法" class="headerlink" title="应对方法"></a>应对方法</h1><p>之所以叫分布式，是因为黑客控制了全球各地几万台中了病毒的电脑（肉鸡）、智能冰箱、摄像头等一起攻击。</p>
+<ol>
+<li>对于“占座不点餐”，可以采用动态调节等待时间、异常间隔请求阶段等方式延缓。</li>
+<li>对于“堵门”（发送大量垃圾数据包）：“分流(CDN)”与“扩建”，将压力分散到全国各个节点；提高总容量。</li>
+<li>对于“累死厨师”：<strong>WAF (Web 应用防火墙)<strong>：这是由 AI 把守的大门。它会分析行为模式：“这个 IP 一秒钟点了 50 次‘红烧狮子头’，人类不可能手速这么快”，于是直接封锁 IP；</strong>人机验证 (CAPTCHA)</strong>:最经典的证明自己是人类；<strong>限流</strong>：顾名思义</li>
+</ol>
+<h1 id="为什么泛滥"><a href="#为什么泛滥" class="headerlink" title="为什么泛滥"></a>为什么泛滥</h1><p>成本极低，暗网有专门的服务。且可以称为勒索手段、恶意竞争等。</p>
+
+                    
+                </div>
+
+                
+
+                <div class="post-bottom-tags-and-share border-box">
+                    <div>
+                        
+                    </div>
+                    <div>
+                        
+                    </div>
+                </div>
+
+                
+
+                
+                    <div class="post-nav border-box">
+                        
+                            <div class="prev-post">
+                                <a class="prev"
+                                   rel="prev"
+                                   href="/2026/01/05/2026-01-05/"
+                                   title="Mon Jan 05 2026 00:00:00 GMT+0800 (China Standard Time)"
+                                >
+                                    <span class="left arrow-icon flex-center">
+                                        <i class="fas fa-chevron-left"></i>
+                                    </span>
+                                    <span class="title flex-center">
+                                        <span class="post-nav-title-item text-ellipsis">Mon Jan 05 2026 00:00:00 GMT+0800 (China Standard Time)</span>
+                                        <span class="post-nav-item">上一篇</span>
+                                    </span>
+                                </a>
+                            </div>
+                        
+                        
+                            <div class="next-post">
+                                <a class="next"
+                                   rel="next"
+                                   href="/2026/01/05/%E4%B8%BA%E4%BB%80%E4%B9%88%E4%BA%BA%E6%9C%BA%E9%AA%8C%E8%AF%81%E7%82%B9%E4%B8%80%E4%B8%8B%E5%B0%B1%E8%A1%8C%EF%BC%9F/"
+                                   title="为什么人机验证点一下就行？"
+                                >
+                                    <span class="title flex-center">
+                                        <span class="post-nav-title-item text-ellipsis">为什么人机验证点一下就行？</span>
+                                        <span class="post-nav-item">下一篇</span>
+                                    </span>
+                                    <span class="right arrow-icon flex-center">
+                                        <i class="fas fa-chevron-right"></i>
+                                    </span>
+                                </a>
+                            </div>
+                        
+                    </div>
+                
+
+                
+                    
+
+
+
+
+
+
+                
+            </div>
         </div>
+
+        
+            <div class="pc-post-toc right-toc">
+                <div class="post-toc-wrap border-box">
+    <div class="post-toc border-box">
+        <ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#DDoS%E5%8E%9F%E7%90%86"><span class="nav-text">DDoS原理</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#1-%E5%A0%B5%E9%97%A8%EF%BC%88%E5%B8%A6%E5%AE%BD%E6%B6%88%E8%80%97%E5%9E%8B-Volumetric-Attacks%EF%BC%89"><span class="nav-text">1. 堵门（带宽消耗型 - Volumetric Attacks）</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#2-%E7%B4%AF%E6%AD%BB%E5%8E%A8%E5%B8%88%EF%BC%88%E5%BA%94%E7%94%A8%E5%B1%82%E6%94%BB%E5%87%BB-Application-Layer-Attacks%EF%BC%89"><span class="nav-text">2. 累死厨师（应用层攻击 - Application Layer Attacks）</span></a></li></ol></li></ol></li></ol></li><li class="nav-item nav-level-1"><a class="nav-link" href="#%E5%BA%94%E5%AF%B9%E6%96%B9%E6%B3%95"><span class="nav-text">应对方法</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#%E4%B8%BA%E4%BB%80%E4%B9%88%E6%B3%9B%E6%BB%A5"><span class="nav-text">为什么泛滥</span></a></li></ol>
     </div>
-    
+</div>
 
-
-
+            </div>
+        
+    </div>
 </div>
 
 
@@ -255,6 +421,31 @@
 
     <!-- post tools -->
     
+        <div class="post-tools right-toc">
+            <div class="post-tools-container border-box">
+    <ul class="post-tools-list border-box">
+        <!-- PC encrypt again -->
+        
+
+        <!-- PC TOC show toggle -->
+        
+            <li class="tools-item flex-center toggle-show-toc">
+                <i class="fas fa-list"></i>
+            </li>
+        
+
+        <!-- PC go comment -->
+        
+
+        <!-- PC full screen -->
+        <li class="tools-item flex-center full-screen">
+            <i class="fa-solid fa-expand"></i>
+        </li>
+    </ul>
+</div>
+
+        </div>
+    
 
     <!-- side tools -->
     <div class="side-tools">
@@ -285,6 +476,10 @@
     </ul>
 
     <ul class="exposed-tools-list border-box">
+        
+            <li class="tools-item toggle-show-toc-tablet flex-center">
+                <i class="fas fa-list"></i>
+            </li>
         
 
         
@@ -342,8 +537,18 @@
 
     <!-- tablet toc -->
     
-</main>
+        <div class="tablet-post-toc-mask">
+            <div class="tablet-post-toc">
+                <div class="post-toc-wrap border-box">
+    <div class="post-toc border-box">
+        <ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#DDoS%E5%8E%9F%E7%90%86"><span class="nav-text">DDoS原理</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#1-%E5%A0%B5%E9%97%A8%EF%BC%88%E5%B8%A6%E5%AE%BD%E6%B6%88%E8%80%97%E5%9E%8B-Volumetric-Attacks%EF%BC%89"><span class="nav-text">1. 堵门（带宽消耗型 - Volumetric Attacks）</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#2-%E7%B4%AF%E6%AD%BB%E5%8E%A8%E5%B8%88%EF%BC%88%E5%BA%94%E7%94%A8%E5%B1%82%E6%94%BB%E5%87%BB-Application-Layer-Attacks%EF%BC%89"><span class="nav-text">2. 累死厨师（应用层攻击 - Application Layer Attacks）</span></a></li></ol></li></ol></li></ol></li><li class="nav-item nav-level-1"><a class="nav-link" href="#%E5%BA%94%E5%AF%B9%E6%96%B9%E6%B3%95"><span class="nav-text">应对方法</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#%E4%B8%BA%E4%BB%80%E4%B9%88%E6%B3%9B%E6%BB%A5"><span class="nav-text">为什么泛滥</span></a></li></ol>
+    </div>
+</div>
 
+            </div>
+        </div>
+    
+</main>
 
 
 
@@ -365,6 +570,20 @@
     
 
     <!-- post page -->
+    
+        <!-- post-helper -->
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/hexo-theme-keep/4.2.5/js/post/post-helper.min.js"></script>
+
+        <!-- toc -->
+        
+            <script src="https://cdnjs.cloudflare.com/ajax/libs/hexo-theme-keep/4.2.5/js/post/toc.min.js"></script>
+        
+
+        <!-- copyright-info -->
+        
+
+        <!-- share -->
+        
     
 
     <!-- categories page -->
