@@ -175,7 +175,7 @@
 
                     
 <div class="fade-in-down-animation">
-    <div class="post-page-container border-box">
+    <div class="post-page-container border-box encrypt">
         <div class="post-content-container border-box">
             
 
@@ -214,7 +214,7 @@
             
                 <span class="meta-info-item post-update-date">
                     <i class="icon fa-solid fa-file-pen"></i>&nbsp;
-                    <span class="datetime" data-updated="Sat May 09 2026 17:01:18 GMT+0800">2026-05-09 17:01:18</span>
+                    <span class="datetime" data-updated="Sat May 16 2026 14:40:37 GMT+0800">2026-05-16 14:40:37</span>
                 </span>
             
         
@@ -254,18 +254,15 @@
                     
 
                     
-                         <hr>
-<p>title: 2026-01-06</p>
-<p>date: 2026-01-06 13:02</p>
-<p>tags:</p>
-<hr>
-<p>今日计划：</p>
-<ul>
-<li><input checked="" disabled="" type="checkbox"> 复习算法</li>
-<li><input checked="" disabled="" type="checkbox"> 复习数据库</li>
-</ul>
-<p>对于计划的分配太过于模糊，主要是不清楚工作量，无法预估每个项目的时间。这样下来跟没制定计划没什么区别。<br>尝试采取严格计时，同时插入保证休息时间。不然总是分不清是累了还是单纯想走神，也无法控制休息时间。</p>
-
+                        <div class="post-encrypt-box border-box"
+                             data-secret="7a860026b43929500dc4dbc2dfd817e2dc4cb549d199c0d0adc87acb524c2aa5"
+                             data-iv="e47c99ee20d9ba58515125f4132bb39f"
+                             data-ep="e2e42690ce6c31150185e569e5c39e7c"
+                             data-content="2d3289193af3286f13bb05c4666614c6c61c06e301689374979f90bccc41e87a4b2df707514e3c7555ff0bb005284f26be2c09c70c9fb5972cf29f157a6474f79ca9ca4cd2029d5fc1b8d2ea873cf5ad57cc77e5541c133dd57d8ff039d83de5fb85ad83573d859f99e27af7da18849fd72c8e6ce8e5634d2e8a6ce362f1fcd8d7b2c9f1ae6915ace0c2d277284c2a5585789da31a601135e8be1ec07925aa7c79ac31a56feff42708771d00ddc0c799a214a9975d713a9f605f5bcd3026ffde0a50fb4d35b6cf29d437e19d662312ee34568474c6fa98705eda590cb6e73b0184f43e3a705c628f4c86cf49eedba3d4e6e9c4a8a2141e5f7cebdaca1daf492bb2e0e6c7e2293498484177dccb0d1f3bca4d818827c80b7fa09adaadf6ddf1a8f5d6d1c92195331380184fddaf76e3650dcea72cf7e57bc89506db95b40f9dfeeceb1da00fe6d7f83ada7d2dfd23bde557dc852ed96bda8a1292bdfc6546ff4c733642d92cecc346db2d372ca2efc3eea94163bd06a8874fb8072c9b8a09c387c267caf2876f78cf10578279e823851aa7f62ef736989f0ecd0df26e00854b91cefa2111b4d94f02d2496429143291db3a55182ed0688232b85ddf3e8c2fd9de745b2a3e5a1f394339d36dbdd7669571d969b9abc1e5b80a509525a3fd0f3655fd526b0f0ff84b927474b2ed5d300c329003024ba3d109b5962ef9a654bdefe184fcfc848417df379696186cb1a03baacbc90e5998ed14c50b65b0c8906e2a6202a191098764a7555b61d2f96cd645163a293755533044253f32dea11a2054e0"
+                        >
+                            <input type="password" class="password-input border-box" placeholder="请输入密码...">
+                        </div>
+                        <div class="post"></div>
                     
                 </div>
 
@@ -399,6 +396,13 @@
             <div class="post-tools-container border-box">
     <ul class="post-tools-list border-box">
         <!-- PC encrypt again -->
+        
+            <li class="status-item flex-center post-lock border-box"
+                data-tooltip-content="重新加密"
+            >
+                <i class="fa-solid fa-lock"></i>
+                <i class="fa-solid fa-lock-open"></i>
+            </li>
         
 
         <!-- PC TOC show toggle -->

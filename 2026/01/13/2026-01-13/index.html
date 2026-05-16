@@ -175,7 +175,7 @@
 
                     
 <div class="fade-in-down-animation">
-    <div class="post-page-container border-box">
+    <div class="post-page-container border-box encrypt">
         <div class="post-content-container border-box">
             
 
@@ -214,7 +214,7 @@
             
                 <span class="meta-info-item post-update-date">
                     <i class="icon fa-solid fa-file-pen"></i>&nbsp;
-                    <span class="datetime" data-updated="Sat May 09 2026 17:01:18 GMT+0800">2026-05-09 17:01:18</span>
+                    <span class="datetime" data-updated="Sat May 16 2026 14:40:37 GMT+0800">2026-05-16 14:40:37</span>
                 </span>
             
         
@@ -254,14 +254,15 @@
                     
 
                     
-                         <hr>
-<p>title: 2026-01-13</p>
-<p>date: 2026-01-13 16:13</p>
-<p>tags:</p>
-<hr>
-<p>日寄。</p>
-<p>还是要磨练心态。怎么磨练？我认为是注意力分配的问题。<br>总是焦虑，觉得自己不够好。但是既付不出行动，也躺不下来。</p>
-
+                        <div class="post-encrypt-box border-box"
+                             data-secret="6b1fdfedc701bc64defb432836dd5bf24fafab3ee47681328eb16f3706459b6a"
+                             data-iv="c57739100343f3e466a3168676ad22e7"
+                             data-ep="cab8650dd8592c7c7e27acce8f900a4d"
+                             data-content="e1cf51a6c8d63bd19ce7d06d83f491bd6b0ecff58a1689231c49b2b4fd0fc17780a55879d8432b739e346e2a1716d034f9a8069a918135919b545670a4a69777e41ecea467f1747aea97765b3fedfc601fa48496e63815b0ba93a4299474e8f4b1ae1ef86d22759c579267728d2c84e9921151cf728c8d5e2af5064de0ad91837bd460fe7b96d33b8b5e6703973151a4ed42c43bc4d66acfd39afc752afd68331dab0af1936086581c543210a7b315b5a5fa9b98efad85f6b8faa340ef523f3f18edb2f7cd2c63f6e61bd9b75afa0975324e69893543c7acd48258926fbb3233ef5ba590420d3661845c443fbe707c39583a66e371e283f6ed5b102de5e62d774165762295fcce10138eb0b07c9c626d"
+                        >
+                            <input type="password" class="password-input border-box" placeholder="请输入密码...">
+                        </div>
+                        <div class="post"></div>
                     
                 </div>
 
@@ -395,6 +396,13 @@
             <div class="post-tools-container border-box">
     <ul class="post-tools-list border-box">
         <!-- PC encrypt again -->
+        
+            <li class="status-item flex-center post-lock border-box"
+                data-tooltip-content="重新加密"
+            >
+                <i class="fa-solid fa-lock"></i>
+                <i class="fa-solid fa-lock-open"></i>
+            </li>
         
 
         <!-- PC TOC show toggle -->

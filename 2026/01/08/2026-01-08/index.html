@@ -175,7 +175,7 @@
 
                     
 <div class="fade-in-down-animation">
-    <div class="post-page-container border-box">
+    <div class="post-page-container border-box encrypt">
         <div class="post-content-container border-box">
             
 
@@ -214,7 +214,7 @@
             
                 <span class="meta-info-item post-update-date">
                     <i class="icon fa-solid fa-file-pen"></i>&nbsp;
-                    <span class="datetime" data-updated="Sat May 09 2026 17:01:18 GMT+0800">2026-05-09 17:01:18</span>
+                    <span class="datetime" data-updated="Sat May 16 2026 14:40:37 GMT+0800">2026-05-16 14:40:37</span>
                 </span>
             
         
@@ -254,19 +254,15 @@
                     
 
                     
-                         <hr>
-<p>title: 2026-01-08</p>
-<p>date: 2026-01-08 13:53</p>
-<p>tags:</p>
-<hr>
-<ul>
-<li><input disabled="" type="checkbox"> 使用番茄钟计时</li>
-<li><input disabled="" type="checkbox"> 算法</li>
-<li><input disabled="" type="checkbox"> 数据库</li>
-<li><input disabled="" type="checkbox"> 加大思维密度</li>
-</ul>
-<p>今天学的比较深入，但是还是还是没能完全遵守番茄时钟。有时到了休息时间但不觉得需要休息，有时到了专注时间却进不了状态。<br>学习不止要学习知识，更要学习背后的思维逻辑，尽量减少“记忆”在学习中的占比。<br>如果不反思，就不会进步。但是如果没有交流，没有视野，效果还是有限。<br>一天的精力是有限的，如何做好精力分配很重要。<br>交叉学习，而不是死磕一课。</p>
-
+                        <div class="post-encrypt-box border-box"
+                             data-secret="6059a38b2c4fdaed8f1da0c4cf45c2d870ccf0a3ffef0343ffc3f43e92272da7"
+                             data-iv="e7fb488d0a2faea396c7fdb52607c152"
+                             data-ep="3d50c01a9380dcba13ae23c5c70dc7de"
+                             data-content="2d5f91449637866e18ee42ddaba82c3017975df9d221d5c5baca7af33454709c868762a0f28c403819f07fce751b01fa4554c1e278637abab40a37ad7be96ffb75e824965def4a8ab63fb332d68f746c9de1b27230e574932ebe74c596af7b3db22e1f888b6980cc6f2561c993f3f9a50f7b584e35f0d528f29f8b1e5d78afa7ccc52c111aee339c339167107b88dff11ce9fc0064c7a176b9b59f1c96c806c986ce4bd0a349052f530e4d9c5b6f3d758ef3a968545677db9d12afb33de66a7cf64e496c57a53c15bf7e55094332255ee11493f10b50f13f3839adc95149f0e535b087a15962a7dfd5e9143e9f166b2e22820654b47c6ceac5226dab7c23d8d24de3fb938eb1be46f7ffe4afece7b89f498d30b8a1ef7767aeebfb1f8474b3b37ee2c4553e978016d01fba6c57e02594849a023bd92aca899e3c4e81c317a2e8d433f5f48206c4dc3b338f585cafeb3af2e8bbcbc7d5f6a852348f99a68c5e696c5efbdab7305cbf7ab8773917c4dda0e5e72c52d3a34afc5e76118a306b0f1324bdbb93f6e24333eb969fff4627893e133bde113b3c604d69c813bff13a837b9018c54003a4f21ffaf6ea0e24a56040e09a282be381b920ceeca457e65e7cc3badfca5bbba87ff2d2f20110fb87742fc88a4691b1996f032e29971a49111933558ef78b3261f0b9f5aa7471146c695f942a1e252510cb2e91268ffe9a939ba9ad04034161b66fffbd36810b0563531c83f8a679870f7a9f6bbacdea32d83ae74b34c1f8210dd868c21f09d4b9acb137e32f6d541e06d87b6dc39931695358a09ecec8a7a2a7ec0cd070c4bb139839536b8c041aac8c5a2fba0c49a5c94a704bdfd855d6a524b81521a265c5751d3fc074de99cbc0a7803fc6992d0832e9270fa6d9e6b38487704545a87c4a8c84444a6cfbad9058305b49061c4f04f687993ec32b551d0c4d9d01f021d09cda1935bbd470d5ec8569092762a2463f1e2ac1e1245320737b195b8f5b35276707aa09be5ea7960bc133546494567e8883a6552386ee06f0cbd6eab9a391468b506fc4f3b5326e28c7b44180f7dc5165bb1cd848de8af0ae39eaeb2476768cd808bbbfb34e3473198011fd7b82058316492345b84cfa8e93cc5e143b4d1d2eb6967eee2805c4ddcb2ac2688188627d1a99d0a8c0126cb3c460bac3ea82d82234e48dad70"
+                        >
+                            <input type="password" class="password-input border-box" placeholder="请输入密码...">
+                        </div>
+                        <div class="post"></div>
                     
                 </div>
 
@@ -400,6 +396,13 @@
             <div class="post-tools-container border-box">
     <ul class="post-tools-list border-box">
         <!-- PC encrypt again -->
+        
+            <li class="status-item flex-center post-lock border-box"
+                data-tooltip-content="重新加密"
+            >
+                <i class="fa-solid fa-lock"></i>
+                <i class="fa-solid fa-lock-open"></i>
+            </li>
         
 
         <!-- PC TOC show toggle -->

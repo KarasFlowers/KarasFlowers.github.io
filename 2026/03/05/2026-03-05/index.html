@@ -175,7 +175,7 @@
 
                     
 <div class="fade-in-down-animation">
-    <div class="post-page-container border-box">
+    <div class="post-page-container border-box encrypt">
         <div class="post-content-container border-box">
             
 
@@ -214,7 +214,7 @@
             
                 <span class="meta-info-item post-update-date">
                     <i class="icon fa-solid fa-file-pen"></i>&nbsp;
-                    <span class="datetime" data-updated="Sat May 09 2026 17:01:18 GMT+0800">2026-05-09 17:01:18</span>
+                    <span class="datetime" data-updated="Sat May 16 2026 14:40:37 GMT+0800">2026-05-16 14:40:37</span>
                 </span>
             
         
@@ -254,13 +254,15 @@
                     
 
                     
-                         <hr>
-<p>title: 2026-03-05</p>
-<p>date: 2026-03-05 19:03</p>
-<p>tags:</p>
-<hr>
-<p>上课时总集中不起来注意力。老是动不动刷手机，效率极其低下。感觉还是不知道要不要听，既不能做到完全不听，有没有仔细停下来的专注力，导致走马观花，频繁分心切换任务。下次可以试试带耳机。关于英语的学习可以利用这些课上时间。</p>
-
+                        <div class="post-encrypt-box border-box"
+                             data-secret="fb6094215d1e0ad5eb7371a72e97aecb16074ac79af51b789d9785ece8d5d41b"
+                             data-iv="a22782edd8cf503511bd9f4f39ace87b"
+                             data-ep="9bb2188ff0354f652e5ca5c83ea9ef0b"
+                             data-content="ad17abea7b4495a2d44fbb990b784a3a34a97a5499e4293da7e4e9f7b3117ca223c85105d280030a6d948d7a98429fa4c3cb6f73a4f7b4f41ee5b6f82e8c39e88e33da2e326e094c776238c903bdf60262979a63958aed483317f36fa5a63abfae7a571b597ca80657ecb57aa01d7afa4f0fb18fb895de89dc0bd79d8fe2f8607405a087e5dd91f5f5e18581d781391f68379af162dc03e10e4bf5ae56a0a81ab2704d327152b39a89cf912692ca94ace1d06779244108a86f52125fe10f41e717ea0160d876549d090c3287f359dd1f5efe587c213dd7c7329c8e05bb3539ae84075e4877ce44c576203fb95987f95ac4c0d3e4f900be3dd5414aa725ca60db3d84a488b024e6d11c81b43926783d843f99b865a7f2960a010a17a249dfc92d4b51fa0f859288be901c53a72ba2c68879f0dd6889e341690103d57638384d2e0a8755a382c4fde788f8f55c37f5f30414cc1d5d794ab5f960c8519e70f8a91a8694670993506e4550925fa5a4fb01c002870c56f509737d9779bb5d0dcd06302311a9bb31811304f4ae2df49f677aed31fad00b60287264cb2f107a8c9dbf0a"
+                        >
+                            <input type="password" class="password-input border-box" placeholder="请输入密码...">
+                        </div>
+                        <div class="post"></div>
                     
                 </div>
 
@@ -394,6 +396,13 @@
             <div class="post-tools-container border-box">
     <ul class="post-tools-list border-box">
         <!-- PC encrypt again -->
+        
+            <li class="status-item flex-center post-lock border-box"
+                data-tooltip-content="重新加密"
+            >
+                <i class="fa-solid fa-lock"></i>
+                <i class="fa-solid fa-lock-open"></i>
+            </li>
         
 
         <!-- PC TOC show toggle -->

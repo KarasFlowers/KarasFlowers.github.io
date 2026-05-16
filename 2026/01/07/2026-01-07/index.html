@@ -175,7 +175,7 @@
 
                     
 <div class="fade-in-down-animation">
-    <div class="post-page-container border-box">
+    <div class="post-page-container border-box encrypt">
         <div class="post-content-container border-box">
             
 
@@ -214,7 +214,7 @@
             
                 <span class="meta-info-item post-update-date">
                     <i class="icon fa-solid fa-file-pen"></i>&nbsp;
-                    <span class="datetime" data-updated="Sat May 09 2026 17:01:18 GMT+0800">2026-05-09 17:01:18</span>
+                    <span class="datetime" data-updated="Sat May 16 2026 14:40:37 GMT+0800">2026-05-16 14:40:37</span>
                 </span>
             
         
@@ -254,20 +254,15 @@
                     
 
                     
-                         <hr>
-<p>title: 2026-01-07</p>
-<p>date: 2026-01-07 12:33</p>
-<p>tags:</p>
-<hr>
-<p>今日计划</p>
-<ul>
-<li><input disabled="" type="checkbox"> 复习算法</li>
-<li><input disabled="" type="checkbox"> 复习数据库</li>
-<li><input disabled="" type="checkbox"> 投简历</li>
-<li><input disabled="" type="checkbox"> 严格按照时钟计时</li>
-</ul>
-<p>今天刚开始使用时钟时，效率明显提高。但是之后就慢慢不起作用了，还是没有严格按照时间来。也许是我对时间的设置有误，</p>
-
+                        <div class="post-encrypt-box border-box"
+                             data-secret="4635cfa48f7eb572011a3f231ff5b74df869dbe2b6f0601acc142159ec8afe66"
+                             data-iv="77fe73ed825c41623126a9e5aa83d366"
+                             data-ep="35ec23df2f697909a8c82908852d825c"
+                             data-content="988b414e83e7f83dfee0d0f13d4be20aa20b81f84077d2ee7de25715a6b7b4f61d48be17333860fa64da7bc1f49d039347362cb50c69e645c6ec5a52192a2d151250d9795455cb36675a72a1cf5183e2cc699dd2fc7e1d04e02949102215c3f4b4a5debede999483b64d12511495b57234d90f4918b06bf0375d368e63c46c7815ec66299d01412a47891138de5f941e03f1406945cf2c9892e0dc7dcee62b3db73ebc33e801a5ea98f8dad1e26e4bcfe107c453485e97debb87bd784cca64dfce62220ab3126140c39d13a72f4cae25650ff1dec3b7bbc98c23983aba9c4d733cfaf56b296edca78ccff01b99cd83acf1d0546595ed0030729ef12756708c7636d45be7729a7425323fef6ecaa742ea36c46d8f788497fa074b7c78a232fb693bd1d54ef2678c4765209fba053ea1ea20aa945b941bc05c6e4d7ad8a9bf8f364fa885c671329b5da9d1f38b028d049999d536704333683a68d7b417fd4882b317eec20e107cd9d64cc3d06d76967d45a375222947e5b51e6975d307c000fd62008af3fde8c3b65c678dae17976a989351c43402e4de5443e0f8cc6c97b8cbadb151fbc5fdc461583fe7a342cbc8447aa3c62a8e3d1071cb03be97e68ae0c28191547340a67c71535640901811e975aa267ef313c416622d4b73225be54d9a9916a7630ae3f62402c443307f161292c77fdc9c227104c0e6a51365881bbaff12721456f1e398cc62e69dd02b97b487d23134030303201e06416543f16eee6582"
+                        >
+                            <input type="password" class="password-input border-box" placeholder="请输入密码...">
+                        </div>
+                        <div class="post"></div>
                     
                 </div>
 
@@ -401,6 +396,13 @@
             <div class="post-tools-container border-box">
     <ul class="post-tools-list border-box">
         <!-- PC encrypt again -->
+        
+            <li class="status-item flex-center post-lock border-box"
+                data-tooltip-content="重新加密"
+            >
+                <i class="fa-solid fa-lock"></i>
+                <i class="fa-solid fa-lock-open"></i>
+            </li>
         
 
         <!-- PC TOC show toggle -->
